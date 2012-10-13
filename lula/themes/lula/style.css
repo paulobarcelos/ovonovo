@@ -1,0 +1,857 @@
+/*   
+Theme Name: Lula Designs
+Theme URI: http://luladesigns.com
+Description: Theme for Lula Designs
+Author: Bryce Licht & Paulo Barcelos
+Author URI: http://brycelicht.com
+Version: 1
+*/
+
+/* ===== global structure ===== */
+
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #E6E7E8;
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	line-height: 24px;
+	overflow-x: hidden;
+}	
+
+#page-wrap {
+	
+}
+
+p {
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 2px;
+}
+
+article, aside, figure, footer, header, nav, section { display: block; }
+
+a {
+	outline: 0;
+}
+
+a:active, a:focus {
+	outline: 0;
+}
+
+:focus { 
+	outline: none; 
+}
+
+::selection {
+	background: #000; color: white; /* Safari */
+}
+
+::-moz-selection {
+	background: #000; color: white; /* Firefox */
+}
+
+/* ===== utils ===== */
+
+.hidden {
+	display: none;
+}
+
+/* ===== grid ===== */
+
+.grid-1col {
+	width: 60px;
+	margin: 0px 10px 24px 10px;
+	float: left;
+	line-height: 14px;
+}
+
+.grid-2col {
+	width: 140px;
+	margin: 0px 0px 24px 0px;
+	float: left;
+	line-height: 16px;
+}
+
+.grid-3col {
+	width: 215px;
+	margin: 0px 16px 24px 16px;
+	float: left;
+	line-height: 16px;
+}
+
+.grid-4col {
+	width: 330px;
+	margin: 0px 24px 24px 0px;
+	line-height: 24px;
+	letter-spacing: 1px;
+}
+
+.grid-5col {
+	width: 375px;
+	margin: 0px 0px 16px 16px;
+	float: left;
+	line-height: 20px;
+}
+
+.grid-6col {
+	width: 455px;
+	margin: 0px 0px 24px 20px;
+	float: left;
+	line-height: 20px;
+}
+
+.grid-8col {
+	width: 600px;
+	margin: 0px 16px 24px 0px;
+	float: left;
+	line-height: 20px;
+}
+
+.left-column {
+	float: left;
+	margin-left: 70px;
+}
+
+.right-column {
+	float: left;
+}
+
+/* ===== 2 colums layout ===== */
+
+#two-column .column *{
+	margin-right: 15px;
+}
+
+/* ===== header ===== */
+
+#header {
+	position: fixed;
+}
+
+#logo-other {
+	position: fixed;
+	float: left;
+	bottom: 35px;
+	margin-left: 40px;
+	height: 100px;
+	width: 165px;
+	background: url(images/logo.png) no-repeat left bottom;
+}
+
+#logo-other:hover {
+	background-position: left top;
+}
+
+#logo-home {
+	position: fixed;
+	float: left;
+	bottom: 35px;
+	margin-left: 40px;
+	height: 100px;
+	width: 165px;
+	background: url(images/logo.png) no-repeat left top;
+}
+#main-nav {
+	position: fixed;
+	float: left;
+	top: 35px;
+	left: 40px;
+	list-style: none;
+	z-index: 200;
+}
+
+#main-nav li {
+	height: 35px;
+	width: 35px;
+	margin-top: 5px;
+}
+
+#main-nav li a:link, #main-nav li a:visited {
+	background-position: left top;	
+}
+
+#main-nav li a:hover, #main-nav li a:active {
+	background-position: left bottom;
+}
+
+#main-nav li a.current {
+	background-position: left bottom;
+	width: 35px;
+}
+
+#button-menu {
+	position: absolute;
+	float: left;
+	height: 35px;
+	width: 420px;
+	background: url(images/button_menu.png) no-repeat;
+}
+
+#button-back {
+	position: absolute;
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url(images/button_back.png) no-repeat;
+}
+
+#button-about {
+	position: absolute;
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url(images/button_about.png) no-repeat;
+}
+
+#button-blog {
+	position: absolute;
+	float: left;;
+	width: 150px;
+	height: 35px;
+	background: url(images/button_blog.png) no-repeat;
+}
+
+#button-contact {
+	position: absolute;
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url(images/button_contact.png) no-repeat;
+}
+
+#button-shopping {
+	position: absolute;
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url(images/button_shopping.png) no-repeat;
+}
+
+#button-home {
+	position: fixed;
+	top: 35px;
+	right: 40px;
+	width: 192px;
+	height: 35px;
+	background: url(images/button_home.png) no-repeat;
+}
+
+#prevslide {
+	position: fixed;
+	top: 50%;
+	left: 40px;
+	height: 35px;
+	width: 35px;
+	margin-top: -20px;
+	background: url(images/arrow_left_1.png) no-repeat left top;
+}
+
+#prevslide:hover {
+	background-position: left bottom;
+}
+
+#nextslide {
+	position: fixed;
+	top: 50%;
+	right: 40px;
+	height: 35px;
+	width: 35px;
+	margin-top: -20px;
+	background: url(images/arrow_right_1.png) no-repeat left top;
+}
+
+#nextslide:hover {
+	background-position: left bottom;
+}
+
+#left-arrow-2 {
+	position: fixed;
+	top: 50%;
+	left: 40px;
+	height: 35px;
+	width: 35px;
+	margin-top: -20px;
+	background: url(images/arrow_left_2.png) no-repeat left top;
+}
+
+#left-arrow-2:hover {
+	background-position: left bottom;
+}
+
+#right-arrow-2 {
+	position: fixed;
+	top: 50%;
+	right: 40px;
+	height: 35px;
+	width: 35px;
+	margin-top: -20px;
+	background: url(images/arrow_right_2.png) no-repeat left top;
+}
+
+#right-arrow-2:hover {
+	background-position: left bottom;
+}
+
+#description {
+	position: absolute;
+	float: right;
+	width: 250px;
+	bottom: 24px;
+	right: 30px;
+}
+
+#white-line {
+	border-top: 1px dashed #fff;
+	margin: 0px 0px 10px 0px;
+}
+
+#description p {
+	display: none;
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#description a {
+	display: none;
+	font-family: "Droid serif", Georgia, serif;
+	font-style: italic;
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: none;
+	letter-spacing: 2px;
+	color: #fff;
+}
+/* ===== slideshow ===== */
+#showtitle {
+	z-index: 200;
+	position: fixed;
+	bottom: 25px;
+	right: 30px;
+	color: #fff;
+	padding: 10px;
+	width: 275px;
+}
+
+#showtitle:hover {
+	background: #000;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+/*
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version 3.1
+	www.buildinternet.com/project/supersized
+	
+	By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+	Released under MIT License / GPL License
+*/
+#supersized-loader { position:absolute; top:48%; left:48%; z-index:10; width:31px; height:31px; text-indent:-999em; background-image:url(images/progress.gif); }
+	
+#supersized { position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
+#supersized img{ position:relative; display:none; outline:none; border:none; }
+#supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }	/*Speed*/
+#supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }			/*Quality*/
+		
+#supersized a { z-index:-30; position:absolute; top:0; left:0; width:100%; height:100%; background:#111;}
+#supersized a.prevslide { z-index:-20; }
+#supersized a.activeslide { z-index:-10; }
+#supersized a.prevslide img, #supersized a.activeslide img{ display:inline; }
+
+/* ===== border ===== */
+
+#top, #bottom, #left, #right {
+    background: #f9f9f9;
+    position: fixed;
+	z-index: 3001000;
+}
+
+#left, #right {
+	top: 0; 
+	bottom: 0;
+	width: 15px;
+}
+
+#left { 
+	left: 0; 
+}
+                
+#right { 
+	right: 0; 
+}
+
+#top, #bottom {
+	left: 0; 
+	right: 0;
+	height: 15px;
+}
+                
+#top { 
+	top: 0; 
+}
+
+#bottom { 
+	bottom: 0; 
+}
+
+#top.transparent, #bottom.transparent, #left.transparent, #right.transparent {
+    background: #f9f9f9;
+    position: fixed;
+	z-index: 1000;
+}
+
+#left.transparent, #right.transparent {
+	top: 0; 
+	bottom: 0;
+	margin: 15px 0px;
+	width: 15px;
+}
+
+#left.transparent { 
+	left: 0; 
+}
+                
+#right.transparent { 
+	right: 0; 
+}
+
+#top.transparent, #bottom.transparent {
+	left: 0; 
+	right: 0;
+	height: 15px;
+}
+                
+#top.transparent { 
+	top: 0; 
+}
+
+#bottom.transparent { 
+	bottom: 0; 
+}
+
+.transparent {
+	filter:alpha(opacity=75);
+	-moz-opacity:0.75;
+	-khtml-opacity: 0.75;
+	opacity: 0.75;
+}
+/* ===== line-container ===== */
+
+#line-container {
+	width: 950px;
+	height: 200px;
+	margin-left: -75px;
+}
+
+#black-line-2 {
+	width: 800px;
+	border-bottom: 1px dotted #999;
+	z-index: 200;
+	margin-bottom: 16px;
+}
+
+#retail-link {
+  float: left;
+  width: 800px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#retail-link a:link, #retail-link a:visited  {
+	color: #000000;
+	text-decoration: underline;
+}
+
+#retail-link a:hover, #retail-link a:active  {
+	color: #000000;
+	text-decoration: line-through;
+	background: #fff;
+}
+
+
+/* ===== about-content ===== */
+
+#main-content {
+	width: 800px;
+	margin: 0 auto 0;
+}
+
+/*#black-line {
+	position: relative;
+	width: 800px;
+	float: left;
+	margin-top: 650px;
+	margin-bottom: 24px;
+	border-bottom: 1px solid #000;
+	z-index: 200;
+}
+
+#about-content {
+	position: relative;
+	float: left;
+	margin-left: 95px;
+	z-index: 200;
+}*/
+
+#about-content {
+	position: absolute;
+	top: 15%;
+	z-index: 0;
+	width: 800px;
+}
+
+.big-type p {
+	font-family: "Droid Serif", Georgia, serif;
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+#black-line {
+	width: 800px;
+	border-bottom: 1px dotted #999;
+	z-index: 200;
+	margin-bottom: 32px;
+}
+
+/* ===== blog-content ===== */
+
+#blog-content {
+	position: absolute;
+	top: 15%;
+	z-index: 0;
+	width: 800px;
+}
+
+#black-line-1 {
+	position: relative;
+	float: left;
+	width: 800px;
+	border-bottom: 1px dotted #999;
+	z-index: 200;
+	margin-bottom: 32px;	
+}
+
+#meta {
+	float: left;
+	width: 140px;
+}
+
+#entry-content {
+	float: left;
+	width: 535px;
+	margin-left: 95px;
+}
+
+#blog-content h2 {
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#blog-content h2 a:link, #blog-content h2 a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+#blog-content h2 a:hover, #blog-content h2 a:active {
+	text-decoration: line-through;
+	background: #fff;
+	color: #000;
+}
+
+#blog-content p a:link, #blog-content p a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+#blog-content p a:hover, #blog-content p a:active {
+	text-decoration: line-through;
+	background: #fff;
+	color: #000;
+}
+
+#entry a:link, #entry a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+#entry a:hover, #entry a:active {
+	text-decoration: line-through;
+	background: #fff;
+	color: #000;
+}
+
+#date p {
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+
+#author p {
+	font-family: "Droid Serif", Georgia, serif;
+	font-size: 12px;
+	line-height: 18px;
+	font-style: italic;
+}
+
+#meta-tags {
+	margin-bottom: 16px;
+}
+
+#meta-tags p {
+	font-size: 11px;
+}
+
+#meta-tags a:link, #meta-tags a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+#meta-tags a:hover, #meta-tags a:active {
+	background: #fff;
+	color: #000;
+	text-decoration: line-through;
+}
+
+.tag {
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+#entry p {
+	margin-bottom: 16px;
+}
+
+
+#blog-image {
+	width: 535px;
+	margin-top: 24px;
+}
+
+#black-line-2 {
+	position: relative;
+	width: 800px;
+	float: left;
+	margin-bottom: 66px;
+	border-bottom: 1px dotted #999;
+	z-index: 200;
+}
+
+.post {
+	float: left;
+	position: relative;
+	margin-bottom: 34px;
+}
+
+#blog-nav {
+	position: relative;
+	float: left;
+	margin-bottom: 100px;
+}
+
+#older-posts {
+	float: right;
+	width: 130px;
+	text-align: right;
+	margin-top: 16px;
+	margin-left: -130px;
+}
+
+#older-posts a:link, #older-posts a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+#older-posts a:hover, #older-posts a:active {
+	background: #fff;
+	color: #000;
+	text-decoration: line-through;
+}
+
+#newer-posts {
+	float: left;
+	width: 120px;
+	text-align: left;
+	margin-top: 16px;
+	margin-left: -800px;
+}
+
+#newer-posts a:link, #newer-posts a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+#newer-posts a:hover, #newer-posts a:active {
+	background: #fff;
+	color: #000;
+	text-decoration: line-through;
+}
+
+/* ===== blog - single ===== */
+
+#blog-single-content {
+	position: absolute;
+	top: 10%;
+	z-index: 0;
+	width: 800px;
+}
+
+#blog-single-content h2 {
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #000;
+	text-decoration: underline;
+}
+
+#back-to-blog a:link, #back-to-blog a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+#back-to-blog a:hover, #back-to-blog a:active {
+	background: #fff;
+	color: #000;
+	text-decoration: line-through;
+}
+
+#blog-single-nav {
+	position: relative;
+	float: left;
+	margin-bottom: 100px;
+}
+
+/* ===== contact-content ===== */
+
+#contact-content {
+	position: absolute;
+	top: 15%;
+	z-index: 0;
+	width: 800px;
+}
+
+.contact-paragraph {
+	float: left;
+}
+
+.contact-paragraph h1 {
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 149px;
+	border-bottom: 1px dashed #999;
+	margin-bottom: 16px;
+	margin-left: 80px;
+}
+
+.contact-paragraph p {
+	width: 155px;
+	margin: 0px 0px 0px 80px;
+	line-height: 24px;
+	letter-spacing: 1px;
+}
+
+.contact-paragraph p a:link, .contact-paragraph p a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+.contact-paragraph p a:hover, .contact-paragraph p a:active {
+	background: #fff;
+	color: #000;
+	text-decoration: line-through;
+}
+
+/* ===== shopping-content ===== */
+
+#shopping-content {
+	position: absolute;
+	top: 15%;
+	z-index: 0;
+	width: 800px;
+}
+
+.shopping-paragraph {
+	float: left;
+	margin-bottom: 16px;
+	margin-left: 37px;
+}
+
+.shopping-paragraph h2 {
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 149px;
+	border-bottom: 1px dashed #999;
+	margin-bottom: 8px;
+}
+
+.shopping-paragraph h2 a:link, .shopping-paragraph h2 a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.shopping-paragraph h2 a:hover, .shopping-paragraph h2 a:active {
+	background: #fff;
+	color: #000;
+	text-decoration: line-through;
+}
+
+.shopping-paragraph p {
+	width: 155px;
+	line-height: 24px;
+	letter-spacing: 0px;
+}
+
+/* ===== footer ===== */
+
+#footer {
+	position: fixed;
+}
+
+#logo-home:hover {
+	background-position: left bottom;
+}
+
+#copyright {
+	position: fixed;
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+	font-size: 9px;
+	text-align: right;
+	float: right;
+	right: 43px;
+	bottom: 34px;
+	color: #BCBEC0;
+}
+
+#copyright a:link, #copyright a:visited {
+	text-decoration: underline;
+	color: #BCBEC0;
+}
+
+#copyright a:hover, #copyright a:active {
+	text-decoration: underline;
+	color: #999;
+	background: #FFF;
+}

@@ -1,0 +1,1 @@
+<?php include("page_2-columns.php");?>
